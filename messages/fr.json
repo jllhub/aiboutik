@@ -1,0 +1,36 @@
+{
+  "HomePage": {
+    "welcome": "Bienvenue sur Aiboutik"
+  },
+  "Header": {
+    "home": "Accueil",
+    "products": "Produits",
+    "shein": "Commander sur Shein",
+    "temu": "Commander sur Temu",
+    "amazon": "Commander sur Amazon",
+    "cart": "Panier",
+    "login": "Connexion"
+  },
+  "ProductsPage": {
+    "title": "Nos Produits"
+  },
+  "SheinPage": {
+    "title": "Commander sur Shein",
+    "subtitle": "Utilisez ce formulaire pour nous envoyer les articles Shein que vous souhaitez commander."
+  },
+  "TemuPage": {
+    "title": "Commander sur Temu",
+    "subtitle": "Utilisez ce formulaire pour nous envoyer les articles Temu que vous souhaitez commander."
+  },
+  "AmazonPage": {
+    "title": "Commander sur Amazon",
+    "subtitle": "Utilisez ce formulaire pour nous envoyer les articles Amazon que vous souhaitez commander."
+  },
+  "CartPage": {
+    "title": "Votre Panier"
+  },
+  "LoginPage": {
+    "title": "Connexion / Inscription",
+    "subtitle": "Connectez-vous pour suivre vos commandes ou créez un compte."
+  }
+}
