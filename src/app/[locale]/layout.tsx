@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import AuthProvider from "@/components/AuthProvider";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,22 +24,26 @@ type Props = {
   params: {locale: string};
 };
 
-export default function RootLayout({children, params: {locale}}: Props) {
+export default async function RootLayout({children, params: {locale}}: Props) {
+  const messages = await getMessages();
+  
   return (
     <html lang={locale}>
       <head>
         <meta name="theme-color" content="#007bff" />
       </head>
       <body className={inter.className}>
-        <AuthProvider>
-          <CartProvider>
-            <div className="flex flex-col min-h-screen">
-              <Header />
-              <main className="flex-grow container mx-auto px-4 py-8">{children}</main>
-              <Footer />
-            </div>
-          </CartProvider>
-        </AuthProvider>
+        <NextIntlClientProvider messages={messages}>
+          <AuthProvider>
+            <CartProvider>
+              <div className="flex flex-col min-h-screen">
+                <Header />
+                <main className="flex-grow container mx-auto px-4 py-8">{children}</main>
+                <Footer />
+              </div>
+            </CartProvider>
+          </AuthProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

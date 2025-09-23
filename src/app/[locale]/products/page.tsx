@@ -1,18 +1,25 @@
 import { getProducts } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function ProductsPage() {
-  const t = useTranslations('ProductsPage');
+export default async function ProductsPage() {
+  const t = await getTranslations('ProductsPage');
   const products = getProducts();
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-8">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12 fade-in">
+          <h1 className="page-title gradient-text">{t('title')}</h1>
+          <p className="page-subtitle">Découvrez notre sélection de produits de qualité</p>
+        </div>
+        <div className="product-grid">
+          {products.map((product, index) => (
+            <div key={product.id} className="slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
