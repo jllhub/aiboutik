@@ -9,7 +9,10 @@
     "temu": "Kòmande sou Temu",
     "amazon": "Kòmande sou Amazon",
     "cart": "Panier",
-    "login": "Konekte"
+    "login": "Konekte",
+    "howItWorks": "Kòman",
+    "pricing": "Prix",
+    "contact": "Contact"
   },
   "ProductsPage": {
     "title": "Pwodwi nou yo"

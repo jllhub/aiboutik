@@ -9,8 +9,11 @@
     "temu": "Commander sur Temu",
     "amazon": "Commander sur Amazon",
     "cart": "Panier",
-    "login": "Connexion"
-  },
+    "login": "Connexion",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Prix",
+    "contact": "Contact"
+  },  
   "ProductsPage": {
     "title": "Nos Produits"
   },

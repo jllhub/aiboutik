@@ -8,7 +8,11 @@ import AuthProvider from "@/components/AuthProvider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 // This function replaces the static metadata object
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
@@ -32,7 +36,7 @@ export default async function RootLayout({children, params: {locale}}: Props) {
       <head>
         <meta name="theme-color" content="#007bff" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${inter.className}`}>
         <NextIntlClientProvider messages={messages}>
           <AuthProvider>
             <CartProvider>
