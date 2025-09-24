@@ -182,9 +182,9 @@ const Header = () => {
           10% promosyon pou premye acha'w... <span className="underline underline-offset-2 decoration-white font-bold">Reklame'l la</span>
         </span>
       </div>
-      <header className="flex justify-between items-center py-6 px-10 bg-white shadow-sm">
+      <header className="flex justify-between items-center py-6 px-10 bg-white">
          <Link href="/" className="flex items-center space-x-2">
-           <img src="/imgs/logo.png" alt="Aiboutik Logo" style={{ width: '8rem' }} />
+           <img src="/imgs/logo.png" alt="Aiboutik Logo" style={{ width: '7rem' }} />
          </Link>
         <nav
           className="hidden md:flex space-x-8 text-gray-700 font-medium items-center"

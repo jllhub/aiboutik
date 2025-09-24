@@ -21,9 +21,9 @@ export default async function Home() {
         className="flex flex-col md:flex-row items-center rounded-4xl justify-between p-10"
       >
         <div className="max-w-2xl" style={{ flexBasis: '95%', height: '32em' }}>
-          <h1 style={{lineHeight:'1.3'}} className="text-3xl md:text-4xl mt-25 font-bold text-white mb-6">
+           <h1 style={{lineHeight:'1.3'}} className="text-3xl md:text-4xl mt-25 font-bold text-white mb-6">
             Ou pa gen kat pavre !? <br />
-            Ebyen kite nou komande sou <br />
+            Ebyen kite Aiboutik komande sou <br />
              <span style={{ color: '#fdc700', position: 'relative', display: 'inline-block' }}>
                Shein, Amazon & Temu
                <span
@@ -51,7 +51,7 @@ export default async function Home() {
           <div className="flex gap-4 mt-6">
           <button className="bg-white text-black font-semibold px-3
            py-2 rounded-full shadow-md hover:bg-gray-100 transition"
-           style={{fontSize:'1.1em',fontWeight:'bold'}}>
+           style={{fontSize:'1.1em',fontWeight:'bold',cursor:'pointer'}}>
             Kijan nou fonksyone?
             <span className="inline-block ml-1 align-middle" aria-hidden="true">
               {/* Thinking icon (lightbulb with a "thought" bubble) */}
@@ -65,7 +65,7 @@ export default async function Home() {
           </button>
           <button className="bg-yellow-400 text-black font-semibold px-5
            py-3 rounded-full shadow-md hover:bg-yellow-500 transition"
-           style={{fontSize:'1.1em',fontWeight:'bold'}}>
+           style={{fontSize:'1.1em',fontWeight:'bold',cursor:'pointer'}}>
             Fe premye acha'm  
             <span className="inline-block ml-2 align-middle" aria-hidden="true">
               <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -117,16 +117,69 @@ export default async function Home() {
 
       {/* How it works */}
       <section className="py-16 px-10 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Koman nou fonksyone?</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          <div className="flex items-center space-x-4">
-            <div className="w-10 h-10 bg-purple-600 text-white flex items-center justify-center rounded-full">1</div>
-            <p className="text-gray-700 font-medium">Choose items</p>
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">Twa etap rapid pou'w fe komand ou yo... </h1>
+
+        <div className="grid md:grid-cols-4 gap-8 max-w-8xl mx-auto w-full">
+          {/* Step 1 */}
+          <div className="bg-white text-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center w-full md:w-[320px]">
+            <div className="w-16 h-16 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-2xl mb-4">1</div>
+            <h2 className="text-lg font-bold mb-2">Chwazi pwodwi ou vle yo</h2>
+            <p>Vizite Shein, Temu, oswa Amazon, epi chwazi tout pwodwi ou bezwen. Kopi lyen chak atik epi kole yo sou platfòm nou an pou kòmanse pwosesis la.</p>
           </div>
-          <span className="text-2xl text-purple-600">→</span>
-          <div className="flex items-center space-x-4">
-            <div className="w-10 h-10 bg-purple-600 text-white flex items-center justify-center rounded-full">2</div>
-            <p className="text-gray-700 font-medium">We purchase & deliver to you</p>
+          {/* Step 2 */}
+          <div className="bg-white text-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center w-full md:w-[320px]">
+            <div className="w-16 h-16 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-2xl mb-4">2</div>
+            <h2 className="text-lg font-bold mb-2">Nou okipe tout acha ou yo</h2>
+            <p>Nou verifye epi trete demann ou a, achte pwodwi yo pou ou, epi asire tout bagay fèt san danje ak transparans. Ou pa bezwen kat kredi entènasyonal.</p>
+          </div>
+          {/* Step 3 */}
+          <div className="bg-white text-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center w-full md:w-[320px]">
+            <div className="w-16 h-16 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-2xl mb-4">3</div>
+            <h2 className="text-lg font-bold mb-2">Peye fasilman</h2>
+            <p>Peye ak MonCash oswa NatCash. Nou fè li fasil pou ou peye san kat kredi entènasyonal.</p>
+          </div>
+          {/* Step 4 */}
+          <div className="bg-white text-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center w-full md:w-[320px]">
+            <div className="w-16 h-16 bg-purple-600 text-white flex items-center justify-center rounded-full font-bold text-2xl mb-4">4</div>
+            <h2 className="text-lg font-bold mb-2">Livrezon rapid ann Ayiti</h2>
+            <p>Nou voye tout atik ou yo rapidman ann Ayiti. Ou ka swiv kòmann ou epi resevwa li san estrès, dirèkteman nan men ekip nou an.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <div className="flex items-start gap-8">
+          <div>
+            <img src="/imgs/herov2.png" alt="Big hero v2" style={{ width: '40rem' }} />
+          </div>
+          <div className="bg-white shadow-md rounded-xl px-6 py-4 text-gray-800 max-w-lg text-left">
+            <div className="relative flex items-start">
+              <div
+                className="relative flex items-center justify-center"
+                style={{ minHeight: '180px', minWidth: '380px' }}
+              >
+                <img
+                  src="/imgs/spoke.png"
+                  alt="Bubble conversation"
+                  className="w-full h-auto"
+                  style={{
+                    minWidth: '600px',
+                    objectFit: 'contain',
+                  }}
+                />
+                <div
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center px-12 py-8"
+                  style={{
+                    pointerEvents: 'none',
+                  }}
+                >
+                  <span className="text-gray-800 text-base leading-relaxed font-normal text-center w-full">
+                    <span className="font-semibold">Kijan li mache?</span> Si w gen nenpòt kesyon, ekri nou sou WhatsApp! Nou la pou ede w chak etap.
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +187,8 @@ export default async function Home() {
       {/* Testimonials */}
       <section className="bg-purple-600 py-12 px-10 text-white rounded-t-3xl">
         <h2 className="text-2xl font-bold text-center mb-8">Testimonials</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Testimonial 1 */}
           <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
               <Image
@@ -151,6 +205,7 @@ export default async function Home() {
             </div>
             <p>“This service is amazing, I got my items without hassle!”</p>
           </div>
+          {/* Testimonial 2 */}
           <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
               <Image
@@ -166,6 +221,74 @@ export default async function Home() {
               </div>
             </div>
             <p>“They helped me get all my Temu stuff shipped safely.”</p>
+          </div>
+          {/* Testimonial 3 */}
+          <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/user3.jpg"
+                alt="User 3"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
+              <div className="ml-4">
+                <p className="font-semibold">Jean Baptiste</p>
+                <p className="text-yellow-500">★★★★★</p>
+              </div>
+            </div>
+            <p>“Mwen te panse li tap difisil pou achte sou Amazon depi Ayiti, men Aiboutik fè tout bagay fasil! Livrezon an te rapid e sèvis la te ekselan.”</p>
+          </div>
+          {/* Testimonial 4 */}
+          <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md md:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/user4.jpg"
+                alt="User 4"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
+              <div className="ml-4">
+                <p className="font-semibold">Marie Paul</p>
+                <p className="text-yellow-500">★★★★★</p>
+              </div>
+            </div>
+            <p>“Mwen te itilize Aiboutik pou achte rad sou Shein, epi tout bagay te rive rapid! Mèsi anpil pou sèvis la.”</p>
+          </div>
+          {/* Testimonial 5 */}
+          <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md md:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/user5.jpg"
+                alt="User 5"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
+              <div className="ml-4">
+                <p className="font-semibold">Ricardo Jean</p>
+                <p className="text-yellow-500">★★★★★</p>
+              </div>
+            </div>
+            <p>“Mwen te peye ak MonCash, epi tout pwosesis la te fasil. Mwen rekòmande Aiboutik bay tout zanmi mwen!”</p>
+          </div>
+          {/* Testimonial 6 */}
+          <div className="bg-white text-gray-800 p-6 rounded-xl shadow-md md:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/user6.jpg"
+                alt="User 6"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
+              <div className="ml-4">
+                <p className="font-semibold">Sophia Charles</p>
+                <p className="text-yellow-500">★★★★★</p>
+              </div>
+            </div>
+            <p>“Mwen te resevwa tout atik mwen yo san pwoblèm. Sèvis kliyan an te toujou disponib pou ede m.”</p>
           </div>
         </div>
       </section>
